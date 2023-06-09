@@ -10,4 +10,6 @@ markers = watershed(image, markers)
 第一步，通过图像灰度化和阈值化处理提取图像灰度轮廓，   ![1686289086534](https://github.com/H6hh/Watershed-Algorithm/assets/98206033/f9e34e99-50b4-47bc-a6ca-2a1cc95983ed)   
 第二步，通过形态学开运算过滤掉小的白色噪声。输出结果如图所示，包括原始图像、阈值化处理、开运算、背景区域、前景区域、未知区域等。   ![image](https://github.com/H6hh/Watershed-Algorithm/assets/98206033/0010c081-6047-410f-b303-b7b93672a2f9)  
 第三步，当前处理结果中，接创建标记变量，在该变量中标记区域，已确认的区域（前景或背景）用不同的正整数标记出来，不确认的区域保持0，使用cv2.connectedComponents()函数来将图像背景标记成0，其他目标用从1开始的整数标记。注意，如果背景被标记成0，分水岭算法会认为它是未知区域，所以要用不同的整数来标记。  
-最后，调用watershed()函数实现分水岭图像分割，标记图像会被修改，边界区域会被标记成0
+最后，调用watershed()函数实现分水岭图像分割，标记图像会被修改，边界区域会被标记成0   ![1686289791391](https://github.com/H6hh/Watershed-Algorithm/assets/98206033/2ea9fdeb-59f9-42e2-b901-3fc215df3796)   
+  ![1686289912754](https://github.com/H6hh/Watershed-Algorithm/assets/98206033/66b7f8d9-a0e7-4d32-a3c7-b18601d37399)
+
